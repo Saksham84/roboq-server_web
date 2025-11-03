@@ -2,10 +2,10 @@
 const mysql = require('mysql2');
 
 const db = mysql.createConnection({
-  host: process.env.HOST,
-  user: process.env.USER,
-  password: process.env.PASSWORD, // Update if needed
-  database: process.env.DATABASE // Your database name
+  host: "mysql.railway.internal" || process.env.HOST,
+  user: "root" || process.env.USER,
+  password: "qajvozjPAZxEMwEtypajOYeEaXSQhLYi"||process.env.PASSWORD, // Update if needed
+  database: "railway"||process.env.DATABASE // Your database name
 });
 
 db.connect((err) => {
